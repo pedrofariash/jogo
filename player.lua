@@ -4,6 +4,19 @@ player = {
   dir = {}
 }
 
+function player.load()
+  player.sprite = love.graphics.newImage('spr_player.png')
+  player.rec = love.graphics.newQuad(0, 0, 32, 32, player.sprite:getWidth(), player.sprite:getHeight())
+end
+
+function player.movement()
+  for a = 1, 4 do
+    if love.keyboard.isDown(player.dirs[a]) then
+      eval("player.dir." .. player.dirs[a] .. "()")
+    end
+  end
+end
+
 function player.dir.left()
   player.x = player.x - 5
 end

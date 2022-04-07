@@ -5,16 +5,11 @@ function eval(x)
 end
 
 function love.load()
-  player.sprite = love.graphics.newImage('spr_player.png')
-  player.rec = love.graphics.newQuad(0, 0, 32, 32, player.sprite:getWidth(), player.sprite:getHeight())
+  player.load()
 end
 
 function love.update(dt)
-  for a = 1, 4 do
-    if love.keyboard.isDown(player.dirs[a]) then
-      eval("player.dir." .. player.dirs[a] .. "()")
-    end
-  end
+  player.movement()
 end
 
 function love.draw()
