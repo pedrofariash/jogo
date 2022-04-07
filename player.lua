@@ -17,6 +17,10 @@ function player.movement()
   end
 end
 
+function player.draw()
+  love.graphics.draw(player.sprite, player.rec, player.x, player.y)
+end
+
 function player.dir.left()
   player.x = player.x - 5
 end

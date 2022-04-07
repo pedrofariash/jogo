@@ -13,5 +13,5 @@ function love.update(dt)
 end
 
 function love.draw()
-  love.graphics.draw(player.sprite, player.rec, player.x, player.y)
+  player.draw()
 end
