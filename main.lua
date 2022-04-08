@@ -8,7 +8,6 @@ end
 
 function love.load()
   textures.load()
-  player.load()
   main_map.load()
 end
 
