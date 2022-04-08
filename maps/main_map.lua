@@ -7,7 +7,7 @@ main_map = {
 }
 
 function main_map.load()
-	player.x = 300
+	player.load()
 	main_map.objects.way.sprite = textures.resources[5]
 	main_map.objects.way.rec = love.graphics.newQuad(0, 0, 200, 30, main_map.objects.way.sprite:getWidth(), main_map.objects.way.sprite:getHeight())
 end
